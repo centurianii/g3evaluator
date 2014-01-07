@@ -16,7 +16,7 @@ Each panel consists of tabs and each tab contains a block of javascript commands
 <li>Edit title.</li>
 <li>Load body html code except the <code>&lt;script></code> tags so that, we can edit our source file and replace the barebone original tags.</li>
 <li>Uses advanced object stringify capabilities of <code>g3.debug</code> object. For this reason a new method was addded to <code>g3.debug</code>: <code>g3.debug.toHtml()</code>.</li>
-<li>Excibit's late instantiation-instantiation on demand of singleton objects with the following command: <code>g3.Evaluator.getInstance();</code>.</li>
+<li>Excibit's late instantiation (instantiation on demand) of singleton objects with the following command: <code>g3.Evaluator.getInstance();</code>.</li>
 </ol>
 
 Depends
