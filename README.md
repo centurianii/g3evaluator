@@ -7,8 +7,10 @@ It uses <code>eval()</code> and emulates <code>console.log()</code> in all clien
 Capabilities:
 =============
 <ol>
+<li>Dynamically add library files.<br />
+It is viable even if we use the <code>file:///</code> protocol.</li>
 <li>Dynamically create panels.<br />
-Each panel consists of tabs and each tab contains a block of javascript commands that test our code.</li>
+Each panel consists of tabs and each tab contains a block of javascript commands that test our code. Consider panels as jasmine's test suites and tabs as nesting suites that contain a bunch of specs. It is apparent that each panel tests some specific code/library/file.</li>
 <li>Dynamically add/edit/delete panels and tabs</li>
 <li>Emulate <code>console.log()</code> in all browsers.</li>
 <li>Edit title.</li>
