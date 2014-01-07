@@ -15,6 +15,7 @@ Each panel consists of tabs and each tab contains a block of javascript commands
 <li>Emulate <code>console.log()</code> in all browsers.</li>
 <li>Edit title.</li>
 <li>Load body html code except the <code>&lt;script></code> tags so that, we can edit our source file and replace the barebone original tags.</li>
+<li>Excibit's late instantiation-instantiation on demand of singleton objects with the following command: <code>g3.Evaluator.getInstance();</code>.</li>
 </ol>
 
 Depends
