@@ -35,7 +35,7 @@ client
   |-jquery
   :  :
   |-g3
-  :  |-g3MyClass.js
+  :  |- <g3MyClass.js>
   :  :
   |-tests
   |  |-jasmine-standalone-2.0.0
@@ -43,10 +43,13 @@ client
   |  |  |-spec
   :  :  :
   |  |-g3
-  |  :  |-g3MyClass-SpecRunner.html
-  |  :  |-g3MyClass-Spec.js
-  |  :  |-g3MyClass-SpecHelper.js
-  |  :  |-test-g3MyClass.js (rename this file to this one!)
+  |  :  |- <g3MyClass-SpecRunner.html>
+  |  :  |- <g3MyClass-Spec.js>
+  |  :  |- <g3MyClass-SpecHelper.js>
+  |  :  |- g3Evaluator.css
+  |  :  |- g3Evaluator.js
+  |  :  |- g3Evaluator.html (rename this file to test-g3MyClass.html)
+  |  :  |- <test-g3MyClass.html>
   :  :  :
 </pre>
 
