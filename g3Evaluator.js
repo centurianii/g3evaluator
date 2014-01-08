@@ -11,21 +11,21 @@
  * @copyright MIT licence.
 *******************************************************************************/
 (function(g3, $, window, document, undefined){
-g3.Evaluator = (function(){
-   /*
-    * Add necessary functions from 'g3.utils' namespace.
-    */
-   g3.utils = g3.utils || {};
-   g3.utils.randomString = function(len, charSet){
-      charSet = charSet || 'ABCDEFGHIJKLMNOPQRSTUVWXYZabcdefghijklmnopqrstuvwxyz0123456789';
-      var result = '', ndx;
-      for (var i = 0; i < len; i++){
-         ndx = Math.floor(Math.random() * charSet.length);
-         result += charSet.substring(ndx, ndx+1);
-      }
-      return result;
+/*
+ * Add necessary functions from 'g3.utils' namespace.
+ */
+g3.utils = g3.utils || {};
+g3.utils.randomString = function(len, charSet){
+   charSet = charSet || 'ABCDEFGHIJKLMNOPQRSTUVWXYZabcdefghijklmnopqrstuvwxyz0123456789';
+   var result = '', ndx;
+   for (var i = 0; i < len; i++){
+      ndx = Math.floor(Math.random() * charSet.length);
+      result += charSet.substring(ndx, ndx+1);
    }
-   
+   return result;
+}
+
+g3.Evaluator = (function(){
    var obj;
    /*
     * initialization function:
@@ -74,7 +74,7 @@ g3.Evaluator = (function(){
          try{
             eval(value);
          }catch(e){
-            alert('Please load a library to test [' + e +']');
+            alert(e);
          }
       }
       
