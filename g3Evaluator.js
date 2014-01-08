@@ -25,7 +25,7 @@ g3.utils.randomString = function(len, charSet){
    return result;
 }
 
-g3.Evaluator = (function(){
+g3.Evaluator = (function(){   
    var obj;
    /*
     * initialization function:
