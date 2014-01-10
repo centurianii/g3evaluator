@@ -1,5 +1,6 @@
 body {
    background: #F8F8F8;
+   margin: 0;
    padding: 10px;
 }
 #title > * {
@@ -46,14 +47,14 @@ textarea {
 pre {
    margin: 0 2px;
    white-space: pre-wrap;
-   background: #eee;
+   /*background: #eee;*/
 }
-#console .data {
+/*#console .data {
    display: block;
    margin: 2px;
    border: 1px solid #ccc;
    padding: 0;
-}
+}*/
 /* 
  * '.tabbedData': General styles of panels
  */
@@ -157,11 +158,12 @@ pre {
 /*
  * '.data': Data for each tab bar
  */
-.tabbedData .tabs .data {
+/*.tabbedData .tabs*/ .data {
    display: block;
    margin: 2px;
    border: 1px solid #ccc;
    padding: 4px 8px;
+   background: #eee;
 }
 /*
  * Js styles
