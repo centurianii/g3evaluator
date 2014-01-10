@@ -1,5 +1,6 @@
 body {
    background: #F8F8F8;
+   padding: 10px;
 }
 #title > * {
    display: inline-block;
@@ -61,6 +62,9 @@ pre {
    display: inline-block;
    float: left;
    overflow: auto;
+   -webkit-box-sizing: border-box;
+   -moz-box-sizing: border-box;
+   box-sizing: border-box;
    width: 49%;
    height: 20em;
    margin: 2px;
