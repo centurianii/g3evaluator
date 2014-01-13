@@ -55,6 +55,13 @@ client
 
 There are two <code>g3</code> folders: the one contains the actual code and the other under <code>tests</code> contains the test files.
 
+Update
+======
+<b>v.0.1.1</b>
+<ol>
+<li>Follows <code>g3.debug()</code> update to v.0.1.2 that handles all types from native types to custom objects or functions with members.</li>
+</ol>
+
 Todo
 ====
 Use of web storage to save user edit.
