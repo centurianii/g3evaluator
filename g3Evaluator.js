@@ -6,7 +6,7 @@
  * @public
  * @return {Object} It builds the node tree and assigns events on nodes.
  *
- * @version 0.1
+ * @version 0.1.1
  * @author Scripto JS Editor by Centurian Comet.
  * @copyright MIT licence.
 *******************************************************************************/
@@ -50,17 +50,17 @@ g3.Evaluator = (function(){
        */
       var _console = {
          rerun: false,
-         log: function(value){
+         log: function(value, n){
             //IE8 returns form with id="console"!
             if(console && console.log)
                console.log(value);
             if(!this.rerun)
                nodes.$console.html('');
             this.rerun = true;
-            if(value && (typeof value === 'object'))
-               nodes.$console.html(nodes.$console.html() + g3.debug(value).toHtml());
-            else
-               nodes.$console.html(nodes.$console.html() + value + '<br />');
+            //if(value && (typeof value === 'object'))
+               nodes.$console.html(nodes.$console.html() + g3.debug(value, n).toHtml());
+            //else
+            //   nodes.$console.html(nodes.$console.html() + value + '<br />');
          }
       };
       
