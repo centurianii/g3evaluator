@@ -59,7 +59,8 @@ Update
 ======
 <b>v.0.1.1</b>
 <ol>
-<li>Follows <code>g3.debug()</code> update to v.0.1.2 that handles all types from native types to custom objects or functions with members.</li>
+<li>Follows <code>g3.debug()</code> update to v.0.1.2 that handles all types from native types to custom objects or functions with members.<br />
+A nice result of the updated <code>g3.debug</code> object is that instead writing <code>console.log(g3.debug(sheet, 0).toHtml());</code> we can now write <code>console.log(sheet, 0);</code></li>
 </ol>
 
 Todo
