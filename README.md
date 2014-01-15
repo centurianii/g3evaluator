@@ -25,9 +25,9 @@ On <code>g3.debug</code>.
 
 Testing
 =======
-The <code>g3.Evaluator</code> is used to test functioning behaviour along with jasmine v.2.0.
+The <code>g3.Evaluator</code> is used to test our code with the use of batch commands that form test cases.
 
-<h3>How our code is constructed?</h3>
+<h3>The linked external files follow this (non-mandatory) structure:</h3>
 <pre>
 my source files (g3), necessary libraries (jquery) and my tests folder (tests):
 client
