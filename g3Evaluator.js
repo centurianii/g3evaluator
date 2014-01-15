@@ -50,7 +50,7 @@ g3.Evaluator = (function(){
        */
       var _console = {
          rerun: false,
-         log: function(value, n){
+         log: function(value, n, force){
             //IE8 returns form with id="console"!
             if(console && console.log)
                console.log(value);
@@ -58,7 +58,7 @@ g3.Evaluator = (function(){
                nodes.$console.html('');
             this.rerun = true;
             //if(value && (typeof value === 'object'))
-               nodes.$console.html(nodes.$console.html() + g3.debug(value, n).toHtml());
+               nodes.$console.html(nodes.$console.html() + g3.debug(value, n, force).toHtml());
             //else
             //   nodes.$console.html(nodes.$console.html() + value + '<br />');
          }
