@@ -1,4 +1,4 @@
-/*********************************Object Evaluator******************************
+/*********************************Object evaluator******************************
  * A graphical client testing tool for batch processing javascript commands.
  * It uses eval() and emulates console.log() in all clients even in IE browsers.
  * @module {g3}
@@ -6,7 +6,7 @@
  * @public
  * @return {Object} It builds the node tree and assigns events on nodes.
  *
- * @version 0.1.1
+ * @version 0.1.2
  * @author Scripto JS Editor by Centurian Comet.
  * @copyright MIT licence.
 *******************************************************************************/
@@ -25,7 +25,7 @@ g3.utils.randomString = function(len, charSet){
    return result;
 }
 
-g3.Evaluator = (function(){   
+g3.evaluator = (function(){   
    var obj;
    /*
     * initialization function:
@@ -114,13 +114,15 @@ g3.Evaluator = (function(){
                   txt += this.nodeValue;
                else if(this.nodeType === 1 && !(this.nodeName.toUpperCase() === 'SCRIPT')){
                   if(excl && (excl.length > 0)){
+                     var found = false;
                      for(var i = 0; i < excl.length; i++){
-                        if(excl[i]){
-                           if(excl[i] !== this.id)
-                              txt += this.outerHTML;
-                        }else
-                           txt += this.outerHTML;
+                        if(excl[i] === this.id){
+                           found = true;
+                           break;
+                        }
                      }
+                     if(!found)
+                        txt += this.outerHTML;
                   }else
                      txt += this.outerHTML;
                }
@@ -217,6 +219,7 @@ g3.Evaluator = (function(){
             save: 0,
             saveAs: 0
          },
+         //apply/remove 'disabled' property on buttons
          apply: function(obj){
             if(obj){
                this.state.save = obj.save;
@@ -232,6 +235,7 @@ g3.Evaluator = (function(){
                $(this.buttons.saveAs).removeAttr('disabled');
             return this;
          },
+         //create object references to actual buttons
          init: function(){
             var self = this;
             $("form#blackboard button, form#blackboard input[type='button']").each(function(){
@@ -322,8 +326,8 @@ g3.Evaluator = (function(){
                   }
                });
                if(!found){
-                  var txt = '<div class="tabbedData"><div class="titleBar"><p class="title">' +
-                  nodes.$panel.val() + '</p><p class="load">Load tab</p></div><div class="tabs"></div><div class="tabs"></div></div>';
+                  var txt = '<div class="gridTabbedData"><div class="tabbedData"><div class="titleBar"><p class="title">' +
+                  nodes.$panel.val() + '</p><p class="load">Load tab</p></div><div class="tabs"></div><div class="tabs"></div></div></div>';
                   $('#tabbedDataWrapper').append(txt);
                }
             }
@@ -332,7 +336,7 @@ g3.Evaluator = (function(){
             if(nodes.$panel.val()){
                $('#tabbedDataWrapper .tabbedData .titleBar .title').each(function(ndx){
                   if($(this).text() === nodes.$panel.val()){
-                     $(this).closest('.tabbedData').remove();
+                     $(this).closest('.tabbedData').closest('.gridTabbedData').remove();
                      return false;
                   }
                });
@@ -367,6 +371,7 @@ g3.Evaluator = (function(){
          if(panelState.$tabbedData && !($newTabbedData.is(panelState.$tabbedData))){
             buttonState.apply({save: 0});
             panelState.$tabbedData.find('.titleBar .title').removeClass('enabled');
+            //panelState.$tabbedData.find('.titleBar .title').addClass('visited');
             //if a tab title fired this event, let private 'panelState.$tab' and 'panelState.$data' to 
             //be handled by it's handler else, nullify them here
             if(panelState.$tab && !event.tabbedData){
@@ -492,7 +497,11 @@ g3.Evaluator = (function(){
          //remove tab bar
          $(this).closest('.tabBar').remove();
       });
-      obj = {};
+      obj = {
+         load: function(selector, url, data, complete){
+            $(selector).load(url, data, complete);
+         }
+      };
       return obj;
    }
    return {
