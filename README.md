@@ -62,6 +62,12 @@ Update
 <li>Follows <code>g3.debug()</code> update to v.0.1.2 that handles all types from native types to custom objects or functions with members.<br />
 A nice result of the updated <code>g3.debug</code> object is that instead writing <code>console.log(g3.debug(sheet, 0).toHtml());</code> we can now write <code>console.log(sheet, 0);</code></li>
 </ol>
+<b>v.0.1.2</b>
+<ol>
+<li>Ajax support added that loads a stub-file, which is just html code and permits visual interface tests.<br />
+A minor update of the relevant <code>css</code> and <code>js</code> files has to do with fluid design that adds an extra class <code>.gridTabbedData</code> and a new <code>div</code> tag that wraps <code>&lt;div class="tabbedData"></code>.<br/>
+Also, all files are renamed with lower character 'E' because it's an object and not a class.</li>
+</ol>
 
 Todo
 ====
