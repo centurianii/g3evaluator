@@ -56,20 +56,26 @@ pre {
    padding: 0;
 }*/
 /* 
- * '.tabbedData': General styles of panels
+ * '.gridTabbedData': Float wrapper of panels
  */
-.tabbedData {
+.gridTabbedData {
    position: relative;
    display: inline-block;
    float: left;
+   width: 50%;
+   margin: 0;
+   border: 0;
+   padding: 0;
+}
+/* 
+ * '.tabbedData': General styles of panels
+ */
+.tabbedData {
    overflow: auto;
-   -webkit-box-sizing: border-box;
-   -moz-box-sizing: border-box;
-   box-sizing: border-box;
-   width: 49%;
+   width: auto;
    height: 20em;
    margin: 2px;
-   border: 3px dotted #808080;
+   border: 3px double #808080;
 }
 .tabbedData:hover {
    border-color: #000000;
