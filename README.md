@@ -1,4 +1,4 @@
-g3Evaluator
+g3evaluator
 ===========
 
 A graphical client testing tool for batch processing javascript commands.<br />
@@ -25,7 +25,7 @@ On <code>g3.debug</code>.
 
 Testing
 =======
-The <code>g3.Evaluator</code> is used to test our code with the use of batch commands that form test cases.
+The <code>g3.evaluator</code> is used to test our code with the use of batch commands that form test cases.
 
 <h3>The linked external files follow this (non-mandatory) structure:</h3>
 <pre>
@@ -46,9 +46,9 @@ client
   |  :  |- <g3MyClass-SpecRunner.html>
   |  :  |- <g3MyClass-Spec.js>
   |  :  |- <g3MyClass-SpecHelper.js>
-  |  :  |- g3Evaluator.css
-  |  :  |- g3Evaluator.js
-  |  :  |- g3Evaluator.html (rename this file to test-g3MyClass.html)
+  |  :  |- g3evaluator.css
+  |  :  |- g3evaluator.js
+  |  :  |- g3evaluator.html (rename this file to test-g3MyClass.html)
   |  :  |- <test-g3MyClass.html>
   :  :  :
 </pre>
