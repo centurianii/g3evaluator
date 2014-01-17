@@ -44,6 +44,9 @@ g3.evaluator = (function(){
          $panel: $('form#addRemovePanel #panelTitle'), /*see 'add/remove panel button actions'*/
          $blackboard: $('#blackboard textarea') /*see 'load to blackboard behaviour'*/
       };
+      //exclude tag '<div id="stub">' from source code
+      if(nodes.$excludeNodes.val().indexOf('stub') === -1)
+         nodes.$excludeNodes.val(nodes.$excludeNodes.val() + ', stub');
       
       /*
        * generic _console object with log function
