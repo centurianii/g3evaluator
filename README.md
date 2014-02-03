@@ -19,8 +19,8 @@ Each panel consists of tabs and each tab contains a block of javascript commands
 <li>Excibit's late instantiation (instantiation on demand) of singleton objects with the following command: <code>g3.Evaluator.getInstance();</code>.</li>
 </ol>
 
-Depends
-=======
+Dependencies
+============
 On <code>g3.debug</code>.
 
 Testing
